@@ -11,7 +11,7 @@ import type { Notification } from "@/types";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/notifications")({
-  head: () => ({ meta: [{ title: "Notifications — Pulse" }] }),
+  head: () => ({ meta: [{ title: "fakebook" }] }),
   component: NotificationsPage,
 });
 

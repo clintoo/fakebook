@@ -14,7 +14,7 @@ import { Plus, TrendingUp, Calendar } from "lucide-react";
 import { relTime } from "@/lib/format";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [{ title: "Home — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Home — fakebook" }] }),
   component: HomePage,
 });
 

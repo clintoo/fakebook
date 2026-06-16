@@ -8,7 +8,7 @@ import { useAuthStore } from "@/stores/auth";
 import { AuthShell } from "./login";
 
 export const Route = createFileRoute("/register")({
-  head: () => ({ meta: [{ title: "Create account — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Create account — fakebook" }] }),
   component: RegisterPage,
 });
 

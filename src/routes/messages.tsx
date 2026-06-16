@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Route = createFileRoute("/messages")({
-  head: () => ({ meta: [{ title: "Messages — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Messages — fakebook" }] }),
   component: MessagesPage,
 });
 

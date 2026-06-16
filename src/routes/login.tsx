@@ -8,7 +8,7 @@ import { authService } from "@/services/mockApi";
 import { useAuthStore } from "@/stores/auth";
 
 export const Route = createFileRoute("/login")({
-  head: () => ({ meta: [{ title: "Sign in — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Sign in — fakebook" }] }),
   component: LoginPage,
 });
 

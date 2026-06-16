@@ -6,7 +6,7 @@ import { PostCard } from "@/components/feed/PostCard";
 import { Bookmark } from "lucide-react";
 
 export const Route = createFileRoute("/saved")({
-  head: () => ({ meta: [{ title: "Saved — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Saved — fakebook" }] }),
   component: SavedPage,
 });
 

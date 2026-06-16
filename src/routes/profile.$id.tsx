@@ -12,7 +12,7 @@ import { fmtCount } from "@/lib/format";
 import { useAuthStore } from "@/stores/auth";
 
 export const Route = createFileRoute("/profile/$id")({
-  head: () => ({ meta: [{ title: "Profile — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Profile — fakebook" }] }),
   component: ProfilePage,
 });
 

@@ -9,7 +9,7 @@ import { Link } from "@tanstack/react-router";
 import { TrendingUp, Hash } from "lucide-react";
 
 export const Route = createFileRoute("/explore")({
-  head: () => ({ meta: [{ title: "Explore — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Explore — fakebook" }] }),
   component: ExplorePage,
 });
 

@@ -10,7 +10,7 @@ import type { Group } from "@/types";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/groups")({
-  head: () => ({ meta: [{ title: "Groups — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Groups — fakebook" }] }),
   component: GroupsPage,
 });
 

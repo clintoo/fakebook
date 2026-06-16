@@ -9,7 +9,7 @@ import type { EventItem } from "@/types";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/events")({
-  head: () => ({ meta: [{ title: "Events — Pulse" }] }),
+  head: () => ({ meta: [{ title: "Events — fakebook" }] }),
   component: EventsPage,
 });
 

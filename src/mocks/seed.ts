@@ -62,7 +62,7 @@ export const currentUser: User = {
   handle: "ada",
   avatar: avatar("ada-lin"),
   cover: cover("ada-cover"),
-  bio: "Product designer building Pulse. Coffee, ceramics, and long walks.",
+  bio: "Product designer building fakebook. Coffee, ceramics, and long walks.",
   location: "Brooklyn, NY",
   pronouns: "she/her",
   isPrivate: false,
