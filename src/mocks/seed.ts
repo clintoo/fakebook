@@ -206,7 +206,7 @@ export const notifications: Notification[] = Array.from({ length: 100 }, (_, i) 
     read: rng() < 0.55,
     text,
   };
-}) as Post[]).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+}).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 
 const dmTexts = [
   "Hey! Are you around this week?",
