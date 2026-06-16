@@ -53,7 +53,7 @@ export function Sidebar() {
             return (
               <li key={item.to}>
                 <Link
-                  to={item.to}
+                  to={item.to as "/"}
                   className={cn(
                     "group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                     active
@@ -164,7 +164,7 @@ export function MobileNav() {
         return (
           <Link
             key={it.to}
-            to={it.to}
+            to={it.to as "/"}
             className={cn(
               "flex flex-col items-center gap-0.5 py-2.5 text-[10px] font-medium",
               active ? "text-primary" : "text-muted-foreground",
