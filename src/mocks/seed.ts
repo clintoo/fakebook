@@ -219,7 +219,7 @@ const dmTexts = [
   "Sharing a draft, would love your take",
 ];
 
-export const conversations: Conversation[] = Array.from({ length: 30 }, (_, i) => {
+export const conversations: Conversation[] = (Array.from({ length: 30 }, (_, i) => {
   const isGroup = i % 6 === 0;
   const partners = isGroup
     ? [currentUser.id, ...Array.from({ length: int(3, 6) }, () => pick(users).id)]
