@@ -86,7 +86,7 @@ const POST_TEXTS = [
   "Walked 14k steps today and didn't open Slack once. Recommend.",
 ];
 
-export const posts: Post[] = Array.from({ length: 150 }, (_, i) => {
+export const posts: Post[] = (Array.from({ length: 150 }, (_, i) => {
   const author = pick(users);
   const hasImage = rng() < 0.45;
   return {
@@ -95,14 +95,14 @@ export const posts: Post[] = Array.from({ length: 150 }, (_, i) => {
     createdAt: minsAgo(int(2, 60 * 24 * 14)),
     text: pick(POST_TEXTS) + (rng() < 0.3 ? " " + pick(POST_TEXTS) : ""),
     image: hasImage ? photo(`post-${i}`) : undefined,
-    privacy: rng() < 0.85 ? "public" : (rng() < 0.5 ? "followers" : "private"),
+    privacy: (rng() < 0.85 ? "public" : (rng() < 0.5 ? "followers" : "private")) as Post["privacy"],
     likes: int(0, 480),
     comments: int(0, 60),
     shares: int(0, 32),
     liked: rng() < 0.25,
     saved: rng() < 0.1,
   };
-}).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+}) as Post[]).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 
 export const comments: Comment[] = posts.slice(0, 60).flatMap((p) => {
   const n = int(1, 5);
@@ -206,7 +206,7 @@ export const notifications: Notification[] = Array.from({ length: 100 }, (_, i) 
     read: rng() < 0.55,
     text,
   };
-}).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+}) as Post[]).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 
 const dmTexts = [
   "Hey! Are you around this week?",
