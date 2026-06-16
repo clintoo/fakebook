@@ -126,7 +126,7 @@ function Thread({ id }: { id: string }) {
         setTimeout(() => setTyping(false), 300);
       }
     });
-    return unsub;
+    return () => { unsub(); };
   }, [id, qc, me?.id]);
 
   useEffect(() => {
