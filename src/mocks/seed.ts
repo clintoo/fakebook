@@ -234,7 +234,7 @@ export const conversations: Conversation[] = Array.from({ length: 30 }, (_, i) =
   };
   return {
     id: `conv_${i + 1}`,
-    kind: isGroup ? "group" : "dm",
+    kind: (isGroup ? "group" : "dm") as Conversation["kind"],
     participantIds: partners,
     title: isGroup ? pick(["Design Crew","Launch War Room","Weekend Crew","Book Club","Roommates"]) : undefined,
     icon: isGroup ? `https://api.dicebear.com/9.x/shapes/svg?seed=conv${i}` : undefined,
@@ -242,7 +242,7 @@ export const conversations: Conversation[] = Array.from({ length: 30 }, (_, i) =
     unread: rng() < 0.4 ? int(1, 6) : 0,
     pinned: i < 2,
   };
-}).sort((a, b) => (b.lastMessage?.createdAt ?? "").localeCompare(a.lastMessage?.createdAt ?? ""));
+}) as Conversation[]).sort((a, b) => (b.lastMessage?.createdAt ?? "").localeCompare(a.lastMessage?.createdAt ?? ""));
 
 export const messagesByConversation: Record<string, Message[]> = Object.fromEntries(
   conversations.map((c) => {
