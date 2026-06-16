@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import {
   Home, Bell, MessageCircle, Users, Calendar, Settings, Search,
-  Bookmark, Compass, Sparkles, Moon, SunMedium, LogOut,
+  Bookmark, Compass, Moon, SunMedium, LogOut,
 } from "lucide-react";
 import { useUIStore } from "@/stores/ui";
 import { useAuthStore } from "@/stores/auth";
@@ -39,9 +39,9 @@ export function Sidebar() {
       <div className="px-5 pt-5 pb-3">
         <Link to="/" className="flex items-center gap-2">
           <div className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground">
-            <Sparkles className="h-5 w-5" />
+            <p className="text-xl font-bold">f</p>
           </div>
-          <div className="font-bold text-lg tracking-tight">Pulse</div>
+          <div className="font-bold text-lg tracking-tight">fakebook</div>
         </Link>
       </div>
 
@@ -124,9 +124,9 @@ export function TopNav() {
     <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b bg-background/80 backdrop-blur px-4 md:px-6">
       <Link to="/" className="md:hidden flex items-center gap-2">
         <div className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
-          <Sparkles className="h-4 w-4" />
+          <p className="text-xl font-bold">f</p>
         </div>
-        <span className="font-bold">Pulse</span>
+        <span className="font-bold">fakebook</span>
       </Link>
       <div className="relative flex-1 max-w-xl mx-auto">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
