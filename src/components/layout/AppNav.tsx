@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 import { useQuery } from "@tanstack/react-query";
 import { notificationService } from "@/services/mockApi";
 
-const NAV = [
+const NAV: { to: string; label: string; icon: typeof Home; key?: string }[] = [
   { to: "/", label: "Home", icon: Home },
   { to: "/explore", label: "Explore", icon: Compass },
   { to: "/notifications", label: "Notifications", icon: Bell, key: "notif" },
@@ -21,7 +21,7 @@ const NAV = [
   { to: "/events", label: "Events", icon: Calendar },
   { to: "/saved", label: "Saved", icon: Bookmark },
   { to: "/settings", label: "Settings", icon: Settings },
-] as const;
+];
 
 export function Sidebar() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
